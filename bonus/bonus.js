@@ -24,6 +24,25 @@ $(document).ready(function(){
     console.log(event.which);
   });
 
+  // al click mostra img corrispondente al cerchio selezionato
+  circle.click(function() {
+    var anyI = $('.nav i');
+    var anyImg = $('.images img');
+    anyI.removeClass('active');
+    anyImg.removeClass('active');
+    $(this).addClass('active');
+    if (anyI.slice(0, 1).hasClass('active') == true) {
+      anyImg.slice(0, 1).addClass('active');
+    } else if (anyI.slice(1, 2).hasClass('active') == true) {
+      anyImg.slice(1, 2).addClass('active');
+    } else if (anyI.slice(2, 3).hasClass('active') == true) {
+      anyImg.slice(2, 3).addClass('active');
+    } else if (anyI.slice(3, 4).hasClass('active') == true) {
+      anyImg.slice(3, 4).addClass('active');
+    }
+  });
+
+
 });
 
 
